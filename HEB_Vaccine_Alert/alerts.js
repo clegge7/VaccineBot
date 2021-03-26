@@ -9,6 +9,8 @@ function checkTimeSlots(){
 	
 	//timeSlots will always be <= miles in length so iterate across is to avoid issues
 	for (iter = 0; iter < timeSlots.length; iter++){
+		//check for appointments within 30 miles away with 3 or more time slots available
+		//(1 time slot openings immediately get booked and aren't work trying)
 		if(parseFloat(miles[iter].innerHTML.replace(/ .*/,'')) < 30.0 && timeSlots[iter].innerHTML.replace(/ .*/,'') >= 3){
 			timeSplotsAvailable = true;
 			vaccinesAvailable();
