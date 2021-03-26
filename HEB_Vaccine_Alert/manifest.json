@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "HEB Vaccine Alert",
+  "version": "1.0",
+
+  "description": "Notifies user when multiple vaccines become available near them",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://vaccine.heb.com/scheduler*"],
+      "js": ["alerts.js"]
+    }
+  ]
+
+}
